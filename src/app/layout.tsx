@@ -1,7 +1,14 @@
 import type { Metadata } from "next";
+import { Poppins } from "next/font/google"; // 1. Import Poppins
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
 import "./globals.css";
+
+// 2. Configure Poppins Font
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"], // ඔයාට අවශ්‍ය font weights
+});
 
 export const metadata: Metadata = {
   title: "BMW Superbikes | High Performance Bikes",
@@ -15,14 +22,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full antialiased">
-      <body className="min-h-full flex flex-col bg-slate-950 text-slate-100">
-        {/* Navbar එක සියලුම පිටු වල උඩින්ම පෙනේ */}
+      {/* 3. Apply poppins.className to <body> */}
+      <body className={`${poppins.className} min-h-full flex flex-col bg-slate-950 text-slate-100`}>
         <Navbar />
-
-        {/* Dynamic Page Content එක මැදට Render වේ */}
         <main className="flex-1">{children}</main>
-
-        {/* Footer එක සියලුම පිටු වල පහළින්ම පෙනේ */}
         <Footer />
       </body>
     </html>
