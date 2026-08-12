@@ -1,10 +1,10 @@
-import HomePage from '@/components/Home/HomePage'
+import RidingGearUi from '@/components/RidingGearPage/RidingGearUi'
 import React from 'react'
 
 const page = () => {
   return (
     <div>
-      <HomePage />
+      <RidingGearUi />
     </div>
   )
 }

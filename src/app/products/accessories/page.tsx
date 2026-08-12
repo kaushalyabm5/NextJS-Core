@@ -1,10 +1,10 @@
-import HomePage from '@/components/Home/HomePage'
+import AccessoriesUi from '@/components/AccessoriesPage/AccessoriesUi'
 import React from 'react'
 
 const page = () => {
   return (
     <div>
-      <HomePage />
+        <AccessoriesUi />
     </div>
   )
 }
