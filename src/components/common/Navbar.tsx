@@ -51,9 +51,9 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.08)] transition-all rounded-none">
+    <header className="sticky top-0 z-50 w-full bg-[#050505] backdrop-blur-md  shadow-[0_10px_30px_-10px_rgba(0,0,0,0.08)] transition-all rounded-none">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-17">
           
           {/* Left Corner: Brand Logo */}
           <Link href="/" className="flex items-center gap-3 group cursor-pointer shrink-0">
@@ -61,7 +61,7 @@ export default function Navbar() {
               <Zap className="w-5 h-5 fill-white" />
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-black tracking-[0.18em] text-slate-900 leading-none group-hover:text-purple-600 transition-colors">
+              <span className="text-xl font-normal tracking-[0.18em] text-neutral-100 leading-none group-hover:text-purple-600 transition-colors">
                 CLASSIFIED
               </span>
               <span className="text-[9px] font-extrabold tracking-[0.25em] text-purple-600 uppercase leading-tight mt-1">
@@ -71,7 +71,7 @@ export default function Navbar() {
           </Link>
 
           {/* Center: Nav Links (Increased gap: gap-10 lg:gap-12) */}
-          <nav className="hidden md:flex items-center gap-10 lg:gap-12 text-sm font-semibold text-slate-700">
+          <nav className="hidden md:flex items-center gap-10 lg:gap-12 text-sm font-normal text-neutral-200">
             <Link href="/" className="hover:text-purple-600 transition-colors cursor-pointer">
               Home
             </Link>
@@ -135,7 +135,7 @@ export default function Navbar() {
             {/* User Icon Button */}
             <Link
               href="/login"
-              className="p-2.5 text-slate-700 hover:text-purple-600 hover:bg-slate-100/80 rounded-full transition-colors cursor-pointer"
+              className="p-2.5 text-neutral-100 hover:text-purple-600 hover:bg-neutral-100/80 rounded-full transition-colors cursor-pointer"
               aria-label="User Account"
             >
               <User className="w-5 h-5" />
@@ -144,7 +144,7 @@ export default function Navbar() {
             {/* Shopping Cart Icon Button */}
             <Link
               href="/cart"
-              className="relative p-2.5 text-slate-700 hover:text-purple-600 hover:bg-slate-100/80 rounded-full transition-colors cursor-pointer"
+              className="relative p-2.5 text-neutral-100 hover:text-purple-600 hover:bg-slate-100/80 rounded-full transition-colors cursor-pointer"
               aria-label="Shopping Cart"
             >
               <ShoppingCart className="w-5 h-5" />
